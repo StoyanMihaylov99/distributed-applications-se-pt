@@ -1,0 +1,23 @@
+:root {
+  --bg-color: #f2f0e4;
+  --accent-orange: #eb773d;
+  --black: #1a1a1a;
+  --white: #ffffff;
+  --border-width: 2px;
+  --shadow-offset: 4px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--black);
+  min-height: 100vh;
+  background-image: radial-gradient(#bcbcbc 1px, transparent 1px);
+  background-size: 20px 20px;
+}

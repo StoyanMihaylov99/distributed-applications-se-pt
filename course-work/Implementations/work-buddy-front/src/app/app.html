@@ -1,0 +1,100 @@
+<div class="landing-page">
+  <nav class="navbar" [class.menu-open]="isMenuOpen()">
+    <div class="nav-left">
+      <div class="logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect width="32" height="32" rx="4" fill="#eb773d"/>
+          <path d="M10 10L14 14M14 14L18 10M14 14V22" stroke="white" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="14" cy="14" r="2" fill="white"/>
+        </svg>
+        <span class="brand-name">WorkBuddy</span>
+      </div>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" aria-label="Toggle menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
+
+    <div class="nav-links-container" [class.show]="isMenuOpen()">
+      <div class="nav-middle">
+        <a href="#">Buddy needed</a>
+        <a href="#">Services</a>
+        <a href="#">Categories</a>
+      </div>
+      <div class="nav-right">
+        <a href="#" class="login-link">Log in</a>
+        <button class="signup-btn">Sign up</button>
+      </div>
+    </div>
+  </nav>
+
+  <main class="hero">
+    <div class="hero-content">
+      <div class="badge"><span class="badge-dot"></span> 12,480 BUDDIES NEAR YOU</div>
+      <h1>Find a <span class="highlight">buddy</span><br>for the job.</h1>
+      <p class="description">
+        Workbuddy connects you straight to trusted local pros — no middlemen, no markup. Mechanics, plumbers, electricians and a hundred other trades, person to person.
+      </p>
+
+      <div class="search-container">
+        <div class="search-input-group">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+          </svg>
+          <input type="text" placeholder="What do you need done?">
+        </div>
+        <div class="divider"></div>
+        <div class="search-input-group">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+          </svg>
+          <input type="text" placeholder="Location">
+        </div>
+        <button class="search-btn">Search &rarr;</button>
+      </div>
+
+      <div class="popular-tags">
+        <span>POPULAR:</span>
+        <button class="tag">Mechanic</button>
+        <button class="tag">Plumber</button>
+        <button class="tag">Electrician</button>
+        <button class="tag">Carpenter</button>
+        <button class="tag">Cleaner</button>
+      </div>
+    </div>
+
+    <div class="hero-card-container">
+      <div class="profile-card">
+        <div class="verified-badge">Verified pro</div>
+        <div class="card-header">
+          <div class="avatar">MR</div>
+          <div class="profile-info">
+            <h3>Marco Rossi</h3>
+            <p>Master Electrician</p>
+          </div>
+        </div>
+        <div class="stats-divider"></div>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-text">4.9 (212 jobs)</span>
+        </div>
+        <div class="stats-divider"></div>
+        <div class="card-stats">
+          <div class="stat-item">
+            <label>RATE</label>
+            <div class="value">€45/hr</div>
+          </div>
+          <div class="stat-item">
+            <label>RESPONDS</label>
+            <div class="value">~10 min</div>
+          </div>
+        </div>
+        <button class="message-btn">Message Marco</button>
+      </div>
+    </div>
+  </main>
+</div>
+
+<router-outlet />
