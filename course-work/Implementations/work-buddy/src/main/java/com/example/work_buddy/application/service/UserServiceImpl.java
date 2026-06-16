@@ -61,7 +61,7 @@ public class UserServiceImpl implements UserService {
         com.example.work_buddy.domain.model.User domain = userDtoMapper.toUserDomain(userDto);
         CycleAvoidingMappingContext context = new CycleAvoidingMappingContext();
         User entity = userPersistenceMapper.toUserEntity(domain, context);
-        entity.setPassword(passwordEncoder.encode(entity.getPassword()));
+        entity.setPassword(passwordEncoder.encode(userDto.password()));
         User savedEntity = userRepository.save(entity);
         return userDtoMapper.toUserDto(userPersistenceMapper.toUserDomain(savedEntity, new CycleAvoidingMappingContext()));
     }
